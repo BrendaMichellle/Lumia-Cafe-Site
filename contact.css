@@ -1,0 +1,379 @@
+/*font-family: 'Castoro', serif;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Raleway', sans-serif; */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /*font-family*/
+  --ff-heading: 'Castoro', serif;
+  --ff-subheading: 'Raleway', sans-serif;
+  --ff-text: 'Open Sans Condensed', sans-serif;
+  /*font-weight*/
+  --fw-thin: 100;
+  --fw-reg: 300;
+  --fw-bold: 900;
+  /*colors*/
+  --clr-light: #fefcfa;
+  --clr-dark: #303030;
+  --clr-accent: #33463b;
+  --clr-light2: #d4c8b8;
+  /*font-size*/
+  --fs-h1: 2.5rem;
+  --fs-h2: 1.75rem;
+  --fs-h3: 1.25rem;
+  --fs-h4: 1.05rem;
+  --fs-body: 1rem;
+  /*box-shadow*/
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 800px) {
+  :root {
+    --fs-h1: 3.5rem;
+    --fs-h2: 2.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.125rem;
+  }
+}
+
+/* General Styles */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--clr-accent);
+  color: var(--clr-light);
+}
+
+.header {
+  display: grid;
+  grid-template-areas: 'logo bars';
+}
+
+.heading {
+  grid-area: logo;
+  font-size: var(--fs-h2);
+  padding: 0.5em 0 0 0.5em;
+  justify-self: start;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: var(--clr-light);
+}
+
+.menu-icon {
+  grid-area: bars;
+  justify-self: end;
+  padding: 1.2em 1em 0 0;
+}
+
+.fa-bars {
+  font-size: var(--fs-h2);
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: var(--clr-light);
+  width: 100vw;
+  height: 100vh;
+  padding: 30px 100px;
+  position: fixed;
+  top: 2px;
+  transform: translate(-120%);
+}
+
+.close-btn {
+  font-size: var(--fs-h1);
+  color: var(--clr-dark);
+  position: absolute;
+  top: 8px;
+  left: 310px;
+}
+
+.shownav {
+  transform: translate(0%);
+  z-index: 1000;
+}
+
+.links {
+  margin: 1.5em 0;
+  list-style-type: none;
+  font-family: var(--ff-subheading);
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-reg);
+  text-align: center;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--clr-dark);
+}
+
+/*STYLE CONTAINER*/
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0.2em 0 0 1em;
+  color: var(--clr-light);
+  font-family: var(--ff-text);
+}
+
+.container-title {
+  font-family: var(--ff-text);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h2);
+  margin-bottom: 0.1em;
+  align-self: center;
+}
+
+.container-name,
+.container-email,
+.container-message {
+  margin: 0 0 0.6em 0;
+}
+
+/*NAME*/
+.name-title,
+.email-title,
+.message-title {
+  font-weight: var(--fw-reg);
+}
+
+.name-title {
+  margin-bottom: 0.3em;
+}
+
+input {
+  width: 85vw;
+  height: 30px;
+  -webkit-appearance: none;
+  outline: none;
+  border-style: none;
+}
+
+.name,
+.email {
+  background-color: var(--clr-accent);
+  border-bottom: 1.5px solid var(--clr-light);
+  color: var(--clr-light);
+}
+
+.email-title,
+.message-title {
+  margin-top: 0.5em;
+}
+
+.message {
+  background-color: var(--clr-accent);
+  border: 1.5px solid var(--clr-light);
+  color: var(--clr-light);
+  padding: 4em;
+  margin-top: 0.5em;
+  border-radius: 5px;
+}
+
+input,
+select,
+textarea {
+  color: var(--clr-light);
+  font-size: var(--fs-h3);
+  font-family: var(--ff-text);
+}
+
+.submit-btn {
+  width: 88vw;
+  font-family: var(--ff-text);
+  font-weight: var(--fw-reg);
+  font-size: var(--fs-h2);
+  background-color: var(--clr-light);
+  border-style: none;
+  color: var(--clr-accent);
+  padding: 0.5em 0;
+  border-radius: 10px;
+  margin-top: 0.5em;
+  box-shadow: 2px 2px 2px #26352c;
+}
+
+.icons {
+  display: grid;
+  grid-template-areas: 'email facebook twitter';
+  justify-items: end;
+  align-items: center;
+  grid-gap: 2em;
+  font-size: var(--fs-h3);
+  margin-top: 0.5em;
+  margin-left: 5em;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.info {
+  margin-top: 0.6em;
+}
+
+.phone {
+  margin-left: 2em;
+  margin-right: 3em;
+}
+
+.contact-email {
+  margin-left: 3em;
+  margin-right: 2em;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 800px) {
+  .close-btn,
+  .fa-bars,
+  .menu-icon {
+    display: none;
+  }
+  .nav {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: auto;
+    height: auto;
+    height: 30vh;
+    padding: 0;
+    position: relative;
+    top: -80px;
+    transform: translate(0%);
+    background-color: transparent;
+  }
+
+  .links {
+    display: inline;
+    padding: 0 0.2em 0 0.2em;
+    text-transform: uppercase;
+  }
+
+  .link {
+    text-decoration: none;
+    color: var(--clr-light);
+    font-family: var(--ff-text);
+    font-size: 2rem;
+  }
+
+  .nav-space {
+    padding-right: 2.5em;
+    padding-left: 2.5em;
+  }
+
+  .heading {
+    font-size: 2.5em;
+    position: absolute;
+    left: 43%;
+    top: -20px;
+    line-height: 1em;
+    z-index: 1000;
+    text-align: center;
+    padding-top: 0.8em;
+  }
+
+  .container {
+    width: 85%;
+    height: 70vh;
+    display: grid;
+    grid-template-areas:
+      'name contact'
+      'email contact'
+      'message icons'
+      'button icons';
+    grid-row-gap: 5px;
+    grid-column-gap: 145px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -40px;
+  }
+
+  .container-name {
+    grid-area: name;
+  }
+
+  .container-title {
+    grid-area: contact;
+    justify-self: end;
+    position: relative;
+    right: 10px;
+    top: 10px;
+  }
+
+  .container-email {
+    grid-area: email;
+  }
+
+  .container-message {
+    grid-area: message;
+  }
+
+  .icons {
+    grid-area: icons;
+  }
+
+  .contact-info {
+    grid-area: icons;
+    font-size: var(--fs-h3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 50px;
+    left: 60px;
+  }
+
+  .phone {
+    position: relative;
+    left: 20px;
+  }
+
+  .message {
+    padding: 0.5em;
+    width: 250px;
+    height: 100px;
+  }
+
+  .container-name,
+  .container-email,
+  .container-message {
+    width: 280px;
+  }
+
+  input {
+    width: 90%;
+    height: 30px;
+    -webkit-appearance: none;
+    outline: none;
+    border-style: none;
+  }
+
+  .submit-btn {
+    width: 250px;
+    font-family: var(--ff-text);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h3);
+    margin-top: 0;
+  }
+  .call {
+    right: 110px;
+  }
+}

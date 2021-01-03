@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumia Cafe</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Open+Sans+Condensed:ital,wght@0,300;1,300&family=Raleway:wght@100;300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <link rel="stylesheet" href="reserve.css">
+  </head>
+<body>
+  <header class="header">
+    <h1 class="heading"> <a class="logo-link" href="index.html">Lumia<br>Cafe</a></h1>
+    <span class="menu-icon"><i class="fas fa-bars"></i></span>
+  </header>
+  <navbar class="nav">
+    <ul class="links">
+      <div class="close-btn"><i class="fas fa-times"></i></div>
+      <li class="links"> <a class="link" href="index.html">Home</a></li>
+      <li class="links"> <a class="link" href="menu.html">Menu</a></li>
+      <span class="nav-space"></span>
+      <li class="links"> <a class="link" href="reserve.html">Reserve</a></li>
+      <li class="links"> <a class="link" href="contact.html">Contact</a></li>
+    </ul>
+  </navbar>
+  <h1 class="container-title">Reservations</h1>
+  <div class="container">
+    <div class="container-name">
+      <h2 class="name-title">Name</h2>
+      <input type="text" class="name">
+    </div>
+    <div class="container-date">
+      <h2 class="date-title">Date</h2>
+      <select class="input-date" name="day" id="day">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+      </select>
+        <select class="input-date" name="month" id="month">
+          <option value="January">January</option>
+          <option value="February">February</option>
+          <option value="March">March</option>
+          <option value="April">April</option>
+          <option value="May">May</option>
+          <option value="June">June</option>
+          <option value="July">July</option>
+          <option value="August">August</option>
+          <option value="September">September</option>
+          <option value="October">October</option>
+          <option value="November">November</option>
+          <option value="December">December</option>
+        </select> 
+        <select class="input-date" name="year" id="year">
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+        </select>
+    </div>
+    <div class="container-time">
+      <h2 class="time-title">Time</h2>
+      <div class="time-options">
+        <div class="time-option first">16:00</div>
+        <div class="time-option">17:00</div>
+        <div class="time-option">18:00</div>
+        <div class="time-option">19:00</div>
+      </div>
+    </div>
+    <div class="container-number">
+      <h2 class="number-title">Number</h2v>
+      <div class="number-options">
+        <div class="number-option first">1</div>
+        <div class="number-option">2</div>
+        <div class="number-option">3</div>
+        <div class="number-option">4</div>
+        <div class="number-option">5</div>
+      </div>
+    </div>
+    <button type="button" class="submit-btn">Submit</button>
+    <p class="call">Call Instead? </p>
+  </div>
+  <script src="menu.js"></script>
+</body>
+</html> 
